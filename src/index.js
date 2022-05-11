@@ -8,11 +8,15 @@ import {
   Navigate,
   Link
 } from "react-router-dom";
-
+import axios from 'axios';
 import Login from './pages/Login';
 import VoteCount from './pages/VoteCount'
 import RegisterVC from './pages/RegisterVC';
 import NoServer from './pages/NoServer'
+
+axios.defaults.baseURL = 'https://api.mafiaengine.com/v1';
+axios.defaults.withCredentials = false; // True for no wildcard. Production
+
 function Pages() {
   return (
     <Router>

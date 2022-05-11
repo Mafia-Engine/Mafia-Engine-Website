@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import logo from '../res/logo.png';
 
-import axios from 'axios';
-axios.defaults.withCredentials = true;
-
+import axios from 'axios'
 
 const REDIRECT_URI = 'https://discord.com/api/oauth2/authorize?client_id=843514276383031296&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Flogin&response_type=code&scope=identify%20guilds'
 export default function Login(props) {
